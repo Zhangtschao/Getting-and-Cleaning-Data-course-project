@@ -26,6 +26,8 @@ for(i in 1:nrow(data.ms)){
 var.name=c("activity",as.character(features$V2[grep("mean",as.character(features$V2))]),as.character(features$V2[grep("std",as.character(features$V2))]))
 colnames(data.ms)<-var.name
 
+head(data.ms)
+
 data.ms.mean<-colMeans(data.ms[,2:80])
 data.ms.mean
 write.table(data.ms.mean,file="mean.txt",row.name=FALSE)
