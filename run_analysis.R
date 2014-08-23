@@ -22,7 +22,6 @@ for(i in 1:nrow(data.ms)){
     if(data.ms[i,1]==j) data.ms[i,1]=as.character(act.name[j,2])
   }
 }
-head(data.ms[,1])
 
 var.name=c("activity",as.character(features$V2[grep("mean",as.character(features$V2))]),as.character(features$V2[grep("std",as.character(features$V2))]))
 colnames(data.ms)<-var.name
